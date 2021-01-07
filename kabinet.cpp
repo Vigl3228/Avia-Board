@@ -16,6 +16,7 @@ InfoUser::InfoUser(const User &user, QWidget *parent) :
     {
         pass += '*';
     }
+
     mUi->LPassword->setText(pass);
     mUi->Lstatus->setText(user.statusString());
 }
