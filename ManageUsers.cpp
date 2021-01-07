@@ -160,6 +160,7 @@ void ManageUsers::on_add_clicked()
         QTableWidgetItem *item_status = new QTableWidgetItem(user.statusString());
 
         int row = mUi->TableUsers->rowCount();
+
         mUi->TableUsers->insertRow(row);
         mUi->TableUsers->setItem(row, 0, item_login);
         mUi->TableUsers->setItem(row, 1, item_status);
