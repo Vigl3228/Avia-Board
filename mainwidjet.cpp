@@ -66,7 +66,6 @@ void MainWidget::slotMainWindow(User *user)
 {
     delete m_currentWidget;
     m_currentWidget = new MainWindow(*user, this);
-
     this->resize(1000, 400);
     connect(m_currentWidget, SIGNAL(changeUser()),
             this, SLOT(Authorization()));
