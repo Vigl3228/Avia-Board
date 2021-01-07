@@ -79,7 +79,6 @@ void ManageFlight::on_add_clicked()
     if (dialog.exec() == QDialog::Accepted)
     {
         emit addFlight(flight);
-
         QTableWidgetItem *item_number = new QTableWidgetItem(flight.get_number());
         QTableWidgetItem *item_AirK = new QTableWidgetItem(flight.AirK());
         QTableWidgetItem *item_destination= new QTableWidgetItem(flight.destination());
