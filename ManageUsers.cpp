@@ -119,7 +119,6 @@ void ManageUsers::on_delete_2_clicked()
         }
         mUi->TableUsers->removeRow(currentRow);
 
-        //перезапись данных
         QFile file(Config::Usersbin);
         if (file.open(QIODevice::ReadOnly))
         {
