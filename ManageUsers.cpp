@@ -123,7 +123,6 @@ void ManageUsers::on_delete_2_clicked()
         {
             QFile write_file("buf_file_users");
             write_file.open(QIODevice::WriteOnly);
-
             QDataStream read_ist(&file);
             QDataStream write_ist(&write_file);
 
