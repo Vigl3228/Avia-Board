@@ -6,13 +6,6 @@
 #include <QDataStream>
 
 
-AddUsers::AddUsers(QWidget *parent) :
-    QDialog(parent),
-    mUi(new Ui::AddUsers)
-{
-    mUi->setupUi(this);
-}
-
 AddUsers::~AddUsers()
 {
     delete mUi;
@@ -42,13 +35,18 @@ bool AddUsers::isLoginExists(const QString &login)
         return false;
 }
 
+AddUsers::AddUsers(QWidget* parent) :
+    QDialog(parent),
+    mUi(new Ui::AddUsers)
+{
+    mUi->setupUi(this);
+}
 
 void AddUsers::accept()
 {
     const QString login = mUi->L_login->text();
     const QString password = mUi->L_password->text();
     User::Status status = User::getListStatus().key(mUi->L_status->currentText());
-
     if (login.isEmpty() || password.isEmpty())
     {
         mUi->Error->setText("Необходимо заполнить все поля!");
