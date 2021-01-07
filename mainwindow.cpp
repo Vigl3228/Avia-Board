@@ -139,7 +139,6 @@ void MainWindow::deleteFlight(int row)
     {
         QFile write_file("flight_file");
         write_file.open(QIODevice::WriteOnly);
-
         QDataStream read_ist(&file);
         QDataStream write_ist(&write_file);
 
