@@ -60,6 +60,7 @@ void AddUsers::accept()
     {
         mUi->Error->setText("Имя пользователя должено содержать от 5 до 20 символов!");
     }
+
     else if (password.size() < 6 || password.size() > 20)
     {
         mUi->Error->setText("Пароль должен содержать от 6 до 20 символов!");
