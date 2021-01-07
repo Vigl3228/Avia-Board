@@ -1,5 +1,22 @@
 #include "flight.h"
 
+Flight::Flight(QString number, const QTime scheduled_arrival_time, const QTime expected_time,
+    const QString AirK, const QString destination, const QString status)
+{
+    setData(number, scheduled_arrival_time, expected_time, AirK, destination, status);
+}
+
+void Flight::setData(QString number, const QTime sch_arr_time, const QTime exp_time,
+    const QString AirK, const QString destination, const QString status)
+{
+    my_num = number;
+    my_sch_arr_time = sch_arr_time;
+    my_exp_time = exp_time;
+    my_air = AirK;
+    my_destinat = destination;
+    my_stat = status;
+}
+
 Flight::Flight()
 {
      my_num="";
@@ -41,25 +58,6 @@ void Flight::setExpected_time(const QTime &expected_time)
 {
     my_exp_time = expected_time;
 }
-
-Flight::Flight(QString number, const QTime scheduled_arrival_time, const QTime expected_time,
-               const QString AirK, const QString destination, const QString status)
-{
-    setData(number, scheduled_arrival_time, expected_time, AirK, destination, status);
-}
-
-void Flight::setData(QString number, const QTime sch_arr_time, const QTime exp_time,
-                     const QString AirK, const QString destination, const QString status)
-{
-    my_num = number;
-    my_sch_arr_time = sch_arr_time;
-    my_exp_time = exp_time;
-    my_air = AirK;
-    my_destinat=destination;
-    my_stat=status;
-}
-
-
 
 QString Flight::destination() const
 {
