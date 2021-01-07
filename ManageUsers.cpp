@@ -38,7 +38,6 @@ ManageUsers::~ManageUsers()
 
 void ManageUsers::slotUpDownStatus()
 {
-
     QPushButton *btn = qobject_cast<QPushButton*>(sender());
 
     int currentRow = mUi->TableUsers->currentRow();
