@@ -86,6 +86,7 @@ void ManageFlight::on_add_clicked()
         QTableWidgetItem *item_expected_time = new QTableWidgetItem(flight.exp_time().toString("hh:mm"));
         QTableWidgetItem *item_status= new QTableWidgetItem(flight.stat());
         int row = mUi->TableFlight->rowCount();
+
         mUi->TableFlight->insertRow(row);
         mUi->TableFlight->setItem(row, 0, item_number);
         mUi->TableFlight->setItem(row, 1, item_AirK );
