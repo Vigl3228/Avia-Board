@@ -69,7 +69,6 @@ void ManageUsers::slotUpDownStatus()
                     if (btn->objectName() == "up")
                     {
 
-
                         if (!user.upStatus())
                         {
                             QMessageBox::warning(this, windowTitle(),
@@ -117,7 +116,6 @@ void ManageUsers::on_delete_2_clicked()
             return;
         }
         mUi->TableUsers->removeRow(currentRow);
-
         QFile file(Config::Usersbin);
         if (file.open(QIODevice::ReadOnly))
         {
