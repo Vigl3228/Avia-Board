@@ -19,7 +19,7 @@ void Flight::setData(QString number, const QTime sch_arr_time, const QTime exp_t
 
 Flight::Flight()
 {
-     my_num="";
+     my_num = "";
      my_air="";
 }
 
