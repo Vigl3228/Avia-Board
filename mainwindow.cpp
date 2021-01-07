@@ -74,7 +74,6 @@ void MainWindow::on_infoUser_clicked()
 void MainWindow::addFlight(Flight flight)
 {
     m_listFlight.append(flight);
-
     QFile file(Config::Flightbin);
     file.open(QIODevice::Append);
     QDataStream ost(&file);
