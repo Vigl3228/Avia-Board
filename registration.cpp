@@ -11,7 +11,6 @@ void SignUp::on_accept_clicked()
     const QString login = mUi->log->text();
     const QString password = mUi->pass->text();
     const QString repeatPassword = mUi->reppass->text();
-
     if (login.isEmpty() || password.isEmpty() || repeatPassword.isEmpty())
     {
         mUi->label_error->setText("Заполните все поля!");
