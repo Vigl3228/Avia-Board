@@ -53,7 +53,7 @@ void Flight::setData(QString number, const QTime sch_arr_time, const QTime exp_t
 {
     my_num = number;
     my_sch_arr_time = sch_arr_time;
-    my_exp_time=exp_time;
+    my_exp_time = exp_time;
     my_air=AirK;
     my_destinat=destination;
     my_stat=status;
