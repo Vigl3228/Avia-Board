@@ -38,6 +38,7 @@ AddFlight::~AddFlight()
 void AddFlight::accept()
 {
     mUi->error->clear();
+
     int row = mUi->Status_box->currentIndex();
     QString status2;
             switch(row)
