@@ -64,6 +64,7 @@ void AddUsers::accept()
     {
         mUi->Error->setText("Пароль должен содержать от 6 до 20 символов!");
     }
+
     else
     {
         m_user.setData(login, password, status);
