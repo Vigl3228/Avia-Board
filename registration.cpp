@@ -13,7 +13,7 @@ void SignUp::on_accept_clicked()
     const QString repeatPassword = mUi->reppass->text();
     if (login.isEmpty() || password.isEmpty() || repeatPassword.isEmpty())
     {
-        mUi->label_error->setText("Заполните все поля!");
+        mUi->label_error->setText("Заполните все поля");
     }
     else if (isLoginExists(login))
     {
