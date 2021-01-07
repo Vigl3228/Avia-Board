@@ -57,7 +57,6 @@ void ManageUsers::slotUpDownStatus()
         if (file.open(QIODevice::ReadOnly)) {
             QFile write_file("buf_file_users");
             write_file.open(QIODevice::WriteOnly);
-
             QDataStream read_ist(&file);
             QDataStream write_ist(&write_file);
 
