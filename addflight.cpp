@@ -26,6 +26,7 @@ AddFlight::AddFlight(Flight *flight, const QList<Flight> &listFlight, Type type,
     {
         mUi->label_7->setText("Добавление");
     }
+
 }
 
 
