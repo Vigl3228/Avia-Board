@@ -78,7 +78,6 @@ void ManageFlight::on_add_clicked()
     dialog.setWindowTitle(windowTitle());
     if (dialog.exec() == QDialog::Accepted)
     {
-        //
         emit addFlight(flight);
 
         QTableWidgetItem *item_number = new QTableWidgetItem(flight.get_number());
