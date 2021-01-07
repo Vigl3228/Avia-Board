@@ -6,7 +6,6 @@
 InfoUser::InfoUser(const User &user, QWidget *parent) :
     QDialog(parent),
     mUi(new Ui::InfoUser)
-
 {
     mUi->setupUi(this);
     mUi->Llogin->setText(user.login());
