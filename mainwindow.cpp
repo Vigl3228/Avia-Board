@@ -195,7 +195,6 @@ void MainWindow::loadFlights()
         mUi->Board_flight->setItem(row, 3, it_sch_arr_time);
         mUi->Board_flight->setItem(row, 4, it_exp_time );
         mUi->Board_flight->setItem(row, 5, it_stat);
-
         row++;
     }
 }
