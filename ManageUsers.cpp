@@ -22,6 +22,7 @@ ManageUsers::ManageUsers(QWidget *parent) :
             m_listUsers.append(user);
             QTableWidgetItem *item_login = new QTableWidgetItem(user.login());
             QTableWidgetItem *item_status = new QTableWidgetItem(user.statusString());
+
             mUi->TableUsers->insertRow(row);
             mUi->TableUsers->setItem(row, 0, item_login);
             mUi->TableUsers->setItem(row, 1, item_status);
