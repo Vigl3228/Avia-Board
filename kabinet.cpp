@@ -10,7 +10,6 @@ InfoUser::InfoUser(const User &user, QWidget *parent) :
 {
     mUi->setupUi(this);
     mUi->Llogin->setText(user.login());
-
     QString pass = "";
 
     for (int i = 0; i < user.password().size(); i++)
