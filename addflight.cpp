@@ -22,6 +22,7 @@ AddFlight::AddFlight(Flight *flight, const QList<Flight> &listFlight, Type type,
         mUi->Nazn->setText(my_fly->destination());
         mUi->Status_box->setCurrentText(my_fly->stat());
     }
+
     else
     {
         mUi->label_7->setText("Добавление");
