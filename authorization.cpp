@@ -56,7 +56,7 @@ void SignIn::on_sign_clicked()
     const QString login = mUi->Llog->text();
     const QString password = mUi->Lpass->text();
     const int minimal_Password_Length = 6;
-    const int maximum_Password_Length = 6;
+    const int maximum_Password_Length = 20;
     if (login.isEmpty() || password.isEmpty())
     {
         mUi->labelError->setText("Заполните все поля!");

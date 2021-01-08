@@ -8,6 +8,8 @@
 void SignUp::on_accept_clicked()
 {
     mUi->label_error->clear();
+    const int minimal_Password_Length = 6;
+    const int maximum_Password_Length = 20;
     const QString login = mUi->log->text();
     const QString password = mUi->pass->text();
     const QString repeatPassword = mUi->reppass->text();
@@ -20,11 +22,11 @@ void SignUp::on_accept_clicked()
         if (mUi->label_error->text().isEmpty())
             mUi->label_error->setText("Данное имя пользователя занято!");
     }
-    else if (login.size() < 6 || login.size() > 20)
+    else if (login.size() < minimal_Password_Length || login.size() > maximum_Password_Length)
     {
         mUi->label_error->setText("Имя пользователя должено содержать от 6 до 20 символов!");
     }
-    else if (password.size() < 6 || password.size() > 20)
+    else if (password.size() < minimal_Password_Length || password.size() > maximum_Password_Length)
     {
         mUi->label_error->setText("Пароль должен содержать от 6 до 20 символов!");
     }
