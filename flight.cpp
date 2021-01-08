@@ -69,7 +69,7 @@ void Flight::setDDestination(const QString &destination)
     my_destinat = destination;
 }
 
-QString Flight::stat() const
+QString Flight::Stat() const
 {
     return my_stat;
 }

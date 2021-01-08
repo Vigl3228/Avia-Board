@@ -25,7 +25,7 @@ ManageFlight::ManageFlight(const QList<Flight> &listFlight, QWidget *parent) :
         QTableWidgetItem *item_destination= new QTableWidgetItem(flight.destination());
         QTableWidgetItem *item_expected_time = new QTableWidgetItem(flight.exp_time().toString("hh:mm"));
         QTableWidgetItem *item_scheduled_arrival_time = new QTableWidgetItem(flight.sch_arr_time().toString("hh:mm"));
-        QTableWidgetItem *item_status= new QTableWidgetItem(flight.stat());
+        QTableWidgetItem *item_status= new QTableWidgetItem(flight.Stat());
 
         mUi->TableFlight->insertRow(row);
         mUi->TableFlight->setItem(row, 0, item_number);
@@ -84,7 +84,7 @@ void ManageFlight::on_add_clicked()
         QTableWidgetItem *item_destination= new QTableWidgetItem(flight.destination());
         QTableWidgetItem *item_scheduled_arrival_time = new QTableWidgetItem(flight.sch_arr_time().toString("hh:mm"));
         QTableWidgetItem *item_expected_time = new QTableWidgetItem(flight.exp_time().toString("hh:mm"));
-        QTableWidgetItem *item_status= new QTableWidgetItem(flight.stat());
+        QTableWidgetItem *item_status= new QTableWidgetItem(flight.Stat());
         int row = mUi->TableFlight->rowCount();
 
         mUi->TableFlight->insertRow(row);
@@ -127,7 +127,7 @@ void ManageFlight::on_edit_clicked()
             mUi->TableFlight->item(currentRow, 2)->setText(flight.destination());
             mUi->TableFlight->item(currentRow, 3)->setText(flight.sch_arr_time().toString("hh:mm") );
             mUi->TableFlight->item(currentRow, 4)->setText(flight.exp_time().toString("hh:mm"));
-            mUi->TableFlight->item(currentRow, 5)->setText(flight.stat());
+            mUi->TableFlight->item(currentRow, 5)->setText(flight.Stat());
         }
     }
 }

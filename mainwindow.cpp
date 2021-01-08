@@ -83,7 +83,7 @@ void MainWindow::addFlight(Flight flight)
     QTableWidgetItem *it_exp_time = new QTableWidgetItem(flight.exp_time().toString("hh:mm"));
     QTableWidgetItem *it_AirK = new QTableWidgetItem(flight.AirK());
     QTableWidgetItem *it_destination= new QTableWidgetItem(flight.destination());
-    QTableWidgetItem *it_status= new QTableWidgetItem(flight.stat());
+    QTableWidgetItem *it_status= new QTableWidgetItem(flight.Stat());
     int row = mUi->Board_flight->rowCount();
     mUi->Board_flight->insertRow(row);
     mUi->Board_flight->setItem(row, 0, it_numb);
@@ -128,7 +128,7 @@ void MainWindow::editFlight(int row, Flight flight)
     mUi->Board_flight->item(row, 2)->setText(flight.destination());
     mUi->Board_flight->item(row, 3)->setText(flight.sch_arr_time().toString("hh:mm"));
     mUi->Board_flight->item(row, 4)->setText(flight.exp_time().toString("hh:mm") );
-    mUi->Board_flight->item(row, 5)->setText(flight.stat());
+    mUi->Board_flight->item(row, 5)->setText(flight.Stat());
 }
 
 void MainWindow::deleteFlight(int row)
@@ -186,7 +186,7 @@ void MainWindow::loadFlights()
         QTableWidgetItem *it_destinat  = new QTableWidgetItem(flight.destination());
         QTableWidgetItem * it_exp_time= new QTableWidgetItem(flight.exp_time ().toString("hh:mm"));
         QTableWidgetItem *it_sch_arr_time= new QTableWidgetItem(flight.sch_arr_time().toString("hh:mm"));
-        QTableWidgetItem *it_stat= new QTableWidgetItem(flight.stat());
+        QTableWidgetItem *it_stat= new QTableWidgetItem(flight.Stat());
 
         mUi->Board_flight->insertRow(row);
         mUi->Board_flight->setItem(row, 0, it_num);

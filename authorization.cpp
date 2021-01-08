@@ -55,15 +55,17 @@ void SignIn::on_sign_clicked()
     mUi->labelError->clear();
     const QString login = mUi->Llog->text();
     const QString password = mUi->Lpass->text();
+    const int minimal_Password_Length = 6;
+    const int maximum_Password_Length = 6;
     if (login.isEmpty() || password.isEmpty())
     {
         mUi->labelError->setText("Заполните все поля!");
     }
-    else if (login.size() < 6 || login.size() > 20)
+    else if (login.size() < minimal_Password_Length || login.size() > maximum_Password_Length)
     {
         mUi->labelError->setText("Имя пользователя должено содержать от 6 до 20 символов!");
     }
-    else if (password.size() < 6 || password.size() > 20)
+    else if (password.size() < minimal_Password_Length || password.size() > maximum_Password_Length)
     {
         mUi->labelError->setText("Пароль должен содержать от 6 до 20 символов!");
     }
